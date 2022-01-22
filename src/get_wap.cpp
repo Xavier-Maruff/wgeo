@@ -19,7 +19,7 @@
 #include <windows.h>
 #include <wlanapi.h>
 
-int get_wap_info(std::vector<wap_info>& wap_vect) noexcept {
+int get_wap_info(std::vector<wap_data>& wap_vect) noexcept {
     DWORD ret_code = 0;
     DWORD client_version = 1;
 
@@ -66,7 +66,7 @@ int get_wap_info(std::vector<wap_info>& wap_vect) noexcept {
 
     for(DWORD i = 0; i < bss_list->dwNumberOfItems; i++) {
         wap_vect.push_back(
-            wap_info(
+            wap_data(
                 std::string(reinterpret_cast<const char*>(bss_list->wlanBssEntries[i].dot11Ssid.ucSSID)),
                 bss_list->wlanBssEntries[i].dot11Bssid,
                 6,

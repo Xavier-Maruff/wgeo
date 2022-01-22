@@ -97,7 +97,6 @@ int get_wap_info(std::vector<wap_data>& wap_vect) noexcept {
 #include <sys/socket.h>
 #include <iwlib.h>
 #include <errno.h>
-#include "wapi.h"
 
 
 int get_wap_info(std::vector<wap_data>& wap_vect) noexcept {

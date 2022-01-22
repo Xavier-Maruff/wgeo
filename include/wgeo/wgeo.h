@@ -67,7 +67,7 @@ WGEO_API int wgeo_set_api_req(char* host, char* route, char* api_key);
  * @param lat The latitude of the device
  * @param lon The longitude of the device
  * @param accuracy The accuracy of the returned latitude and longitude
- * @return int Success or failure code
+ * @return int return code
  */
 WGEO_API int wgeo_get_location(double* lat, double* lon, double* accuracy);
 

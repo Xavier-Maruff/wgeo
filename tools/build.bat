@@ -3,19 +3,9 @@
 @echo off
 SETLOCAL
 
-if [%~1]==[] (goto :default_build) else (goto :dist_build)
-
-:default_build
+if [%~1]==[] (set build_type=Release) else (set build_type=%~1)
 mkdir build
 cd build
-set build_type=Release
-goto :end
-
-:dist_build
-mkdir build_%~1
-cd build_%~1
-set build_type=%~1
-goto :end
 
 :end
 echo Building %build_type% distribution...

@@ -1,6 +1,5 @@
 @echo off
 
-if [%~1]==[] (cd build\tests) else (cd build_%~1\tests)
-
+cd build\tests
 ctest
 cd ..\..

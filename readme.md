@@ -34,6 +34,13 @@ Usage:
 tools\build {{Debug || Release || undefined}}
 ```
 
+## installing
+After compiling wgeo, copy the `include/wgeo` directory to somewhere your compiler can find it, and the contents of the `lib` directory to somewhere your linker can find them.
+Linux example:
+```bash
+sudo cp -r include/wgeo /usr/include
+sudo cp lib/* /usr/lib
+```
 ### platform-independent external dependencies:
 * Boost
 * OpenSSL

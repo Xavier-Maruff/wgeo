@@ -19,7 +19,7 @@ enable_testing()
 
 add_executable(
     wgeo_tests
-    ${CMAKE_CURRENT_SOURCE_DIR}/functional.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/api_success.cpp
 )
 target_link_libraries(
   wgeo_tests
@@ -27,7 +27,7 @@ target_link_libraries(
   ${OPENSSL_LIBRARIES}
   gtest_main
 )
-target_compile_definitions(wgeo_tests PRIVATE -DCONFIG_PATH="../../tools/env.txt")
+target_compile_definitions(wgeo_tests PRIVATE -DCONFIG_PATH="tools/env.txt")
 
 include(GoogleTest)
 gtest_discover_tests(wgeo_tests)

@@ -1,5 +1,3 @@
 @echo off
 
-cd build\tests
-ctest
-cd ..\..
+build\tests\wgeo_tests

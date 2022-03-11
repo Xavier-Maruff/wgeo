@@ -28,10 +28,12 @@ The wgeo repo provides bash and batch build scripts, which require CMake to be i
 
 Usage:
 ```bash 
-./tools/build.sh {{Debug || Release || undefined}}
+# linux
+./tools/build.sh (one of 'Debug', 'Release', or nothing)
 ```
 ```batch
-tools\build {{Debug || Release || undefined}}
+@REM windows
+tools\build (one of 'Debug', 'Release', or nothing)
 ```
 
 ## installing
@@ -46,19 +48,21 @@ sudo cp lib/* /usr/lib
 * OpenSSL
 
 ### linux additional dependencies:
-* libnl-3.0
-* libnl-genl-3.0
+* libiw-dev
+* libiw30
 
 ## testing
 Wgeo utilises GTest for testing, and can be run using the bash or batch `test` scripts, which rely on `ctest`.
-To set up your environment, create the file `tools/env.txt` cat write your Google geolocation API key to it.
+To set up your environment, create the file `tools/env.txt` and write your Google geolocation API key to it.
 
 To run the tests:
 ```bash
-sudo ./tools/test.sh {{Debug || Release || undefined}}
+# linux
+sudo ./tools/test.sh
 ```
 ```batch
-tools\test {{Debug || Release || undefined}}
+@REM windows
+tools\test
 ```
 
 ## full usage example

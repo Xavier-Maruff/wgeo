@@ -1,3 +1,2 @@
 #!/bin/bash
-cd build/tests
-ctest
+sudo build/tests/wgeo_tests
